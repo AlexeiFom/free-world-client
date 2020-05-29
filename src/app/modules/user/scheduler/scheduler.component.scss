@@ -1,0 +1,64 @@
+.content-wrap {
+    height: 100%;
+    display: flex;
+    .left-part {
+        width: 50%;
+        //text-align: center;
+        padding: 0 20px;
+        .create-event-wrap {
+            p {
+                margin-top: 16px;
+            }
+            .collapseForm {
+                color: black;
+                .card {
+                    margin: 0 auto;
+                    .card-body {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-around;
+
+                        .selected-time-wrap {
+                            position: relative;
+                            .selected-time-error {
+                                position: absolute;
+                                color: red;
+                                top: -12px;
+                                left: 50%;
+                                transform: translate(-50%);
+                                white-space: nowrap;
+                            }
+
+                            .correct-time {
+                                ::ng-deep .ngb-tp-input {
+                                    color: green;
+                                }
+                            }
+                            .time-error {
+                                ::ng-deep .ngb-tp-input {
+                                    color: red;
+                                }
+                            }
+                        }
+
+                        .text-wrap {
+                            flex-grow: 1;
+                            padding: 0 20px;
+                        }
+
+                        .create-event-text {
+                            &.error {
+                                border: 2px solid red;
+                            }
+                            height: calc(1.5em + 0.5rem + 9px) !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .right-part {
+        width: 50%;
+        overflow: scroll;
+    }
+}

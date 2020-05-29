@@ -1,0 +1,22 @@
+.main-container {
+  height: 100%;
+  background-color: black;
+  background: url("../../../../../assets/images/space2.jpg");
+  display: flex;
+  flex-direction: column;
+  
+  .navbar {
+    z-index: 2;
+
+    .navbar-brand{
+      svg{
+        fill:white;
+        width: 50px;
+      }
+    }
+
+    #navbarSupportedContent {
+      justify-content: flex-end;
+    }
+  }
+}

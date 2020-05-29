@@ -1,0 +1,34 @@
+.navbar {
+    background-color: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.9);
+    color: rgba(0, 0, 0, 0.9);
+    border-bottom: 1px solid white;
+
+    
+
+    .navbar-toggler {
+        background-color: white;
+    }
+
+    #navbarNav {
+        justify-content: flex-end;
+
+        .navbar-nav {
+            .nav-item {
+                .nav-link {
+                    cursor: pointer;
+                    color: white;
+                    &.user-info {
+                        cursor: default;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 991px) {
+        #navbarNav {
+            padding-top: 20px;
+        }
+    }
+}

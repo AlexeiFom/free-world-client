@@ -1,0 +1,36 @@
+<div class="main-content-wrap">
+  <app-header></app-header>
+  <div class="content-wrap">
+
+    <div class="sidebar-wrap">
+      <div class="top-menu text-center">
+        <span class="title">- Dashboard -</span>
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" [routerLinkActive]="['active']" routerLink="scheduler">Scheduler</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLinkActive]="['active']" routerLink="medicine">Medicine</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLinkActive]="['active']" routerLink="news">News</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLinkActive]="['active']" routerLink="weather">Weather</a>
+          </li>
+        </ul>
+      </div>
+      <div class="settings-wrap text-center">
+        <div class="icon-wrap">
+          <a routerLink="#">
+            <fa-icon [icon]="faCogs" class="fa-2x"></fa-icon>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

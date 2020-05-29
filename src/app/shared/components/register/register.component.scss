@@ -1,0 +1,64 @@
+app-register:host {
+    flex-grow: 1 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .register-form-wrap {
+        max-width: 500px;
+        padding: 20px;
+        border-radius: 5px;
+        border: 1px solid white;
+        
+        form {
+            color: white;
+    
+            .form-group {
+                text-align: center;
+    
+                .form-control {
+                    background-color: transparent;
+                }
+            }
+    
+            .form-title {
+                position: relative;
+                font-family: initial;
+                letter-spacing: 2px;
+                font-weight: bold;
+                font-size: 24px;
+                padding-bottom: 15px;
+            }
+    
+            .form-title::before {
+                content: "";
+                width: 50px;
+                height: 1px;
+                background-color: white;
+                position: absolute;
+                left: -60px;
+                top: 9px;
+            }
+    
+            .form-title::after {
+                content: "";
+                width: 50px;
+                height: 1px;
+                background-color: white;
+                position: absolute;
+                right: -60px;
+                top: 9px;
+            }
+    
+            .form-item {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+    
+    .form-control:focus{
+        border-color: #36b411;
+    }
+}
+
+

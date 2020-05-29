@@ -1,0 +1,8 @@
+{
+    "/api/*": {
+        "target": "https://infinite-lowlands-09520.herokuapp.com",
+        "secure": false,
+        "logLevel": "debug",
+        "changeOrigin": true
+    }
+}

@@ -1,0 +1,20 @@
+<ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
+  <li [ngbNavItem]="1">
+    <a ngbNavLink>Selected day</a>
+    <ng-template ngbNavContent>
+      <p>Selected</p>
+      <app-scheduler-event-table [(eventsList)]="forPerDayEvents"></app-scheduler-event-table>
+
+    </ng-template>
+  </li>
+  <li [ngbNavItem]="2">
+    <a ngbNavLink>All</a>
+    <ng-template ngbNavContent>
+      <p>All</p>
+      <app-scheduler-event-table [eventsList]="allEvents"></app-scheduler-event-table>
+    </ng-template>
+  </li>
+</ul>
+
+<div [ngbNavOutlet]="nav" class="exists-events-content mt-2">
+</div>
