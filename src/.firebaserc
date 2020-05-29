@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "angular-deploy-efaf8"
+  },
+  "targets": {
+    "angular-deploy-efaf8": {
+      "hosting": {
+        "test-client-name": [
+          "free-world-client"
+        ]
+      }
+    }
+  }
+}
