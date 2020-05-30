@@ -1,7 +1,7 @@
 export const environment = {
   production: false,
-  // url: 'http://localhost:5000/api',
-  url: 'https://free-world-server.herokuapp.com/api',
+   url: 'http://localhost:5000/api',
+  //url: 'https://free-world-server.herokuapp.com/api',
 
   firebaseConfig: {
     apiKey: "AIzaSyAW9vzZXNh-HeJGIC363VtTQE2eGo19LGg",
