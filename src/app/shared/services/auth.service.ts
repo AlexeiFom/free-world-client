@@ -26,6 +26,7 @@ export class AuthService {
 
   login(model: Login): Observable<any> {
     return new Observable(subscriber => {
+      debugger
       this.http.post(`${environment.url}/auth/login`, model)
         .subscribe(data => {
           localStorage.setItem('userInfo', JSON.stringify(data['userInfo']))
