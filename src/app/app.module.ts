@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AppRoutingModule } from './app-routing.module';
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
-import { UserModule } from './modules/user/user.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MaterialModule } from './modules/material/material.module';
@@ -37,7 +36,6 @@ firebase.initializeApp(environment.firebaseConfig);
   imports: [
     BrowserModule,
     AppRoutingModule,
-    UserModule,
     FontAwesomeModule,
     NgbModule,
     HttpClientModule,

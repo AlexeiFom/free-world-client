@@ -19,7 +19,6 @@ export class SchedulerService {
   constructor(private http: HttpClient) { }
 
   async getEvents(): Promise<SchedulerEvent[]> {
-    debugger
     const id = JSON.parse(localStorage.getItem('userInfo'))._id;
 
     return await this.http.get<SchedulerEvent[]>(`${environment.url}/scheduler/events/${id}`).toPromise();

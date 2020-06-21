@@ -4,6 +4,7 @@ import { IndexLayoutComponent } from './shared/components/layouts/index-layout/i
 import { IndexComponent } from './shared/components/index/index.component';
 import { LoginComponent } from './shared/components/login/login.component';
 import { RegisterComponent } from './shared/components/register/register.component';
+import { AuthGuardService } from './shared/services/auth-guard.service';
 
 
 const routes: Routes = [
@@ -24,8 +25,12 @@ const routes: Routes = [
         component: RegisterComponent
       }
     ]
+  },
+  {
+    path: 'user',
+    canActivate:[AuthGuardService],
+    loadChildren: () => import('./modules/user/user.module').then(m => m.UserModule)
   }
-
 ];
 
 @NgModule({
