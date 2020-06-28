@@ -306,7 +306,10 @@ export class NewsService {
       `${environment.newsApiUrl}/top-headlines?category=entertainment&country=us&pageSize=20&pageSize=33&page=1&apiKey=${environment.newsApiKey}`
     )
       .pipe(map(data => {
+        debugger
+
         let articlesList = data["articles"];
+
         return {
           totalResults: data['totalResults'],
           category: this.category ? this.category : '',

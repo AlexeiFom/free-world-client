@@ -7,6 +7,7 @@ import { NewsComponent } from './news/news.component';
 import { WeatherComponent } from './weather/weather.component';
 import { HomeComponent } from './home/home.component';
 import { GoogleMapComponent } from './google-map/google-map.component';
+import { NewsInfoComponent } from './news-info/news-info.component';
 
 const routes: Routes = [
     {
@@ -28,6 +29,10 @@ const routes: Routes = [
             {
                 path: 'news',
                 component: NewsComponent
+            },
+            {
+                path: 'news-info',
+                component: NewsInfoComponent
             },
             {
                 path: 'weather',

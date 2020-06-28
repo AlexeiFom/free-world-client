@@ -55,13 +55,12 @@ export class LoginComponent {
     this.authService.login(this.model)
       .subscribe(data => {
         this.loaderService.hide();
-        debugger
         this.router.navigate(['/user'])
           .then(response => {
-            debugger
+            console.log('LoggedIn Successfully.');
           })
           .catch(err => {
-            debugger
+
             console.log(err);
           })
       },

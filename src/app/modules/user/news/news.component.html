@@ -1,5 +1,6 @@
 <div class="news-wrap">
-  <mat-card *ngFor="let item of news.articles" class="example-card">
+  <!-- <mat-card *ngFor="let item of news.articles" [routerLink]="['../news-info', item]" class="example-card"> -->
+    <mat-card *ngFor="let item of news.articles" (click)="moveToNewsInfo(item)" class="news-card">
     <mat-card-header>
       <mat-card-title>{{item.title}}</mat-card-title>
     </mat-card-header>

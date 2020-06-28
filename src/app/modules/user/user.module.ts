@@ -18,6 +18,7 @@ import { WeatherComponent } from './weather/weather.component';
 import { HomeComponent } from './home/home.component';
 import { GoogleMapComponent } from './google-map/google-map.component';
 import { MaterialModule } from '../material/material.module';
+import { NewsInfoComponent } from './news-info/news-info.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { MaterialModule } from '../material/material.module';
     NewsComponent,
     WeatherComponent,
     HomeComponent,
-    GoogleMapComponent
+    GoogleMapComponent,
+    NewsInfoComponent
   ],
   imports: [
     CommonModule,
