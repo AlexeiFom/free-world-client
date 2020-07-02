@@ -12,6 +12,7 @@ export class AuthService {
   constructor(private http: HttpClient) { }
 
   register(model: Register): Observable<any> {
+    debugger;
     return new Observable(subscriber => {
       this.http.post(`${environment.url}/auth/register`, model)
         .subscribe(data => {
@@ -25,6 +26,7 @@ export class AuthService {
   }
 
   login(model: Login): Observable<any> {
+    debugger;
     return new Observable(subscriber => {
       this.http.post(`${environment.url}/auth/login`, model)
         .subscribe(data => {
@@ -39,7 +41,7 @@ export class AuthService {
   }
 
   resetPassword(email: string): Observable<any> {
-
+    debugger
     return new Observable(subscriber => {
       this.http.post(`${environment.url}/auth/resetPassword`, { domain: environment.domain , email: email })
         .subscribe(data => {
@@ -59,5 +61,4 @@ export class AuthService {
     const token = JSON.parse(localStorage.getItem('userInfo'))?.['token'];
     return token ? true : false;
   }
-
 }
