@@ -1,7 +1,10 @@
 export const environment = {
   production: true,
+  newsApiUrl: 'https://newsapi.org/v2',
+  newsApiKey:'007d843e5d784645b84de2fc336f793e',
   url: '/api',
-  domain:'',
+  //toDo Get 'domain' data from proxy.congig.json
+  domain:'https://infinite-lowlands-09520.herokuapp.com',
   firebaseConfig: {
     apiKey: "AIzaSyAW9vzZXNh-HeJGIC363VtTQE2eGo19LGg",
     authDomain: "free-world-7d259.firebaseapp.com",
