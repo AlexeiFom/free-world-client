@@ -9,7 +9,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let event of events; index as i" [ngClass]="event.isActive ? 'enabled': 'disabled'">
+      <tr *ngFor="let event of events; index as i" [ngClass]="event.isActive ? 'active': 'inactive'">
         <th class="text-center" scope="row">{{ i + 1 }}</th>
         <td class="text-center">
           {{ event.date | date:'MMMM d, y, h:mm:ss a' }}

@@ -17,6 +17,8 @@ import { NewsComponent } from './news/news.component';
 import { WeatherComponent } from './weather/weather.component';
 import { HomeComponent } from './home/home.component';
 import { GoogleMapComponent } from './google-map/google-map.component';
+import { MaterialModule } from '../material/material.module';
+import { NewsInfoComponent } from './news-info/news-info.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import { GoogleMapComponent } from './google-map/google-map.component';
     NewsComponent,
     WeatherComponent,
     HomeComponent,
-    GoogleMapComponent
+    GoogleMapComponent,
+    NewsInfoComponent
   ],
   imports: [
     CommonModule,
@@ -39,7 +42,8 @@ import { GoogleMapComponent } from './google-map/google-map.component';
     NgbModule,
     NgbDatepickerModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MaterialModule
   ],
   exports: [SchedulerEventTableComponent],
   bootstrap: [SchedulerEventTableComponent]

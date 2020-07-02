@@ -4,6 +4,9 @@ import { IndexLayoutComponent } from './shared/components/layouts/index-layout/i
 import { IndexComponent } from './shared/components/index/index.component';
 import { LoginComponent } from './shared/components/login/login.component';
 import { RegisterComponent } from './shared/components/register/register.component';
+import { AuthGuardService } from './shared/services/auth-guard.service';
+import { ForgotPasswordComponent } from './shared/components/forgot-password/forgot-password.component';
+import { ConfirmPasswordComponent } from './shared/components/confirm-password/confirm-password.component';
 
 
 const routes: Routes = [
@@ -22,10 +25,22 @@ const routes: Routes = [
       {
         path: 'register',
         component: RegisterComponent
+      },
+      {
+        path: 'forgot-password',
+        component: ForgotPasswordComponent
+      },
+      {
+        path: 'confirm-password',
+        component: ConfirmPasswordComponent
       }
     ]
+  },
+  {
+    path: 'user',
+    canActivate:[AuthGuardService],
+    loadChildren: () => import('./modules/user/user.module').then(m => m.UserModule)
   }
-
 ];
 
 @NgModule({

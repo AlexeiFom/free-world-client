@@ -1,6 +1,9 @@
 export const environment = {
   production: false,
-   url: 'http://localhost:5000/api',
+  newsApiUrl: 'https://newsapi.org/v2',
+  newsApiKey:'007d843e5d784645b84de2fc336f793e',
+  url: 'http://localhost:5000/api',
+  domain:'http://localhost:4200/',
   //url: 'https://free-world-server.herokuapp.com/api',
 
   firebaseConfig: {

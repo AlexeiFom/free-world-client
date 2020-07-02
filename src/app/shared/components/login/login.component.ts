@@ -39,7 +39,7 @@ export class LoginComponent {
     });
   }
 
-//toDo check this method
+  //toDo check this method
   closeError() {
     this.message.isError = false;
   }
@@ -55,8 +55,14 @@ export class LoginComponent {
     this.authService.login(this.model)
       .subscribe(data => {
         this.loaderService.hide();
+        this.router.navigate(['/user'])
+          .then(response => {
+            console.log('LoggedIn Successfully.');
+          })
+          .catch(err => {
 
-        this.router.navigate(['/user']);
+            console.log(err);
+          })
       },
         error => {
           this.loaderService.hide();

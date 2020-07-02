@@ -1,0 +1,38 @@
+.back-to-page-wrap {
+    svg {
+        width: 40px;
+        fill: #448d44;
+        border: 1px solid green;
+        border-radius: 6px;
+        padding: 3px;
+    }
+    svg:hover {
+        cursor: pointer;
+    }
+
+    .back-to-page-text{
+        color:green;
+        margin-left: 3px;
+        text-decoration: underline;
+    }
+}
+.news-card {
+    max-width: 780px;
+    margin: 0 auto;
+    margin-top: 12px;
+
+    .mat-card-title {
+        margin-bottom: 25px;
+    }
+
+    .image-wrap{
+        height: 400px;
+        margin-bottom: 16px;
+        img{
+            margin:0;
+            width:100%;
+            height:100%;
+            object-fit: cover;
+        }
+    }
+}

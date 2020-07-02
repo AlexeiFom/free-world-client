@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { environment } from '@environment/environment';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 
-import { Observable, Subject} from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 
 import { SchedulerEvent } from '../models/scheduler-event/scheduler-event';
 
@@ -19,7 +19,9 @@ export class SchedulerService {
   constructor(private http: HttpClient) { }
 
   async getEvents(): Promise<SchedulerEvent[]> {
-    return await this.http.get<SchedulerEvent[]>(`${environment.url}/scheduler/events`).toPromise();
+    const id = JSON.parse(localStorage.getItem('userInfo'))._id;
+
+    return await this.http.get<SchedulerEvent[]>(`${environment.url}/scheduler/events/${id}`).toPromise();
   }
 
   checkActiveEvents(events: SchedulerEvent[]) {
@@ -31,8 +33,8 @@ export class SchedulerService {
     return events;
   }
 
-  sortByDate(events: SchedulerEvent[]){
-    events.sort((a,b)=>{
+  sortByDate(events: SchedulerEvent[]) {
+    events.sort((a, b) => {
       return <any>new Date(b.date.toString()) - <any>new Date(a.date.toString());
     })
     return events;
@@ -40,6 +42,10 @@ export class SchedulerService {
 
   addEvent(event) {
     return new Observable(subscriber => {
+      debugger
+
+      event.userId = JSON.parse(localStorage.getItem('userInfo'))._id;
+
       this.http.post(`${environment.url}/scheduler/addEvent`, event)
         .subscribe(response => {
           event._id = response['id'];

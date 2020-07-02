@@ -38,8 +38,26 @@ export class AuthService {
     })
   }
 
+  resetPassword(email: string): Observable<any> {
+
+    return new Observable(subscriber => {
+      this.http.post(`${environment.url}/auth/resetPassword`, { domain: environment.domain , email: email })
+        .subscribe(data => {
+          debugger
+          // localStorage.setItem('userInfo', JSON.stringify(data['userInfo']))
+          subscriber.next()
+        },
+          error => {
+            debugger
+            subscriber.error(error)
+          }
+        )
+    })
+  }
+
   isAuthenticated(): boolean {
     const token = JSON.parse(localStorage.getItem('userInfo'))?.['token'];
     return token ? true : false;
   }
+
 }

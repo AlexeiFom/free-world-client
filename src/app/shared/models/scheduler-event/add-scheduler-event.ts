@@ -4,7 +4,8 @@ export class AddSchedulerEvent {
     date: Object;
     text: string;
     isActive: boolean;
-
+    userId: string;
+    
     constructor(date, text) {
         this.date = date;
         this.text = text;

@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AppRoutingModule } from './app-routing.module';
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
-import { UserModule } from './modules/user/user.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MaterialModule } from './modules/material/material.module';
@@ -21,6 +20,8 @@ import { AuthModalComponent } from './shared/components/modals/auth-modal/auth-m
 
 import { environment } from '@environment/environment';
 import * as firebase from "firebase/app";
+import { ForgotPasswordComponent } from './shared/components/forgot-password/forgot-password.component';
+import { ConfirmPasswordComponent } from './shared/components/confirm-password/confirm-password.component';
 
 firebase.initializeApp(environment.firebaseConfig);
 
@@ -33,11 +34,12 @@ firebase.initializeApp(environment.firebaseConfig);
     RegisterComponent,
     LoaderComponent,
     AuthModalComponent,
+    ForgotPasswordComponent,
+    ConfirmPasswordComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    UserModule,
     FontAwesomeModule,
     NgbModule,
     HttpClientModule,

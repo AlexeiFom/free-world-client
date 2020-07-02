@@ -28,7 +28,12 @@
       class="btn btn-primary">Submit</button>
   </form>
 
-  <p *ngIf="message.isError" (ngModel)="message.isError" class="authError-wrap">
+  <p *ngIf="message.isError" (ngModel)="message.isError" class="auth-error-wrap">
     <ngb-alert type="danger" (close)="closeError()">{{message.text}}</ngb-alert>
   </p>
+
+  <div class="additional-functions-wrap">
+    <p>forgot your password? <a routerLink="../forgot-password">click here</a></p>
+    <p>new user? <a routerLink="../register">create new account</a></p>
+  </div>
 </div>

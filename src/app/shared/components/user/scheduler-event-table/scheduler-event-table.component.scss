@@ -6,10 +6,10 @@
   }
   tbody {
     tr {
-      &.enabled {
+      &.active {
         background-color: #a2ffa2;
       }
-      &.disabled {
+      &.inactive {
         background-color: #ff8c8c;
       }
     }

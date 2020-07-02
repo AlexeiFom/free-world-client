@@ -1,9 +1,11 @@
 import {NgModule} from '@angular/core';
 import {MatDialogModule, MAT_DIALOG_DEFAULT_OPTIONS, MatDialogConfig} from '@angular/material/dialog';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   exports: [
-    MatDialogModule
+    MatDialogModule,
+    MatCardModule
   ],
   providers: [
     { 
